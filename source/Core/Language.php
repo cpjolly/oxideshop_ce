@@ -846,6 +846,9 @@ class Language extends \OxidEsales\Eshop\Core\Base
         $themePath = $appDirectory . 'views/*/' . $language;
         $langFiles = $this->_appendLangFile($langFiles, $themePath, "options");
 
+        $themePath = $appDirectory . 'views/*/translations/' . $language;
+        $langFiles = $this->_appendLangFile($langFiles, $themePath, "options");
+
         // module language files
         $langFiles = $this->_appendModuleLangFiles($langFiles, $modulePaths, $language, true);
 
